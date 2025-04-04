@@ -32,24 +32,6 @@ Esta página utiliza **Bootstrap** para la creación de una interfaz de usuario 
    - Muestra los usuarios guardados en `localStorage` en tarjetas (cards) de Bootstrap.
    - Cada tarjeta muestra el nombre y correo del usuario.
 
-## Instalación
-
-### Requisitos
-
-- Tener un navegador moderno con soporte para HTML5, CSS3 y JavaScript.
-- Conexión a Internet para cargar Bootstrap desde una CDN.
-
-### Pasos para iniciar el proyecto
-
-1. **Clonar el repositorio**:
-   ```bash
-   git clone https://github.com/tu-usuario/pagina-gestion-usuarios.git
-   ```
-2. **Abrir el archivo `index.html`**:
-   - Navega a la carpeta del proyecto y abre `index.html` en tu navegador para comenzar a usar la aplicación.
-
-## Estructura de Archivos
-
 ## Funcionalidades Detalladas
 
 ### 1. **NavBar**:
