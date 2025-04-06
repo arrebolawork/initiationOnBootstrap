@@ -1,5 +1,5 @@
-const indexFrom = document.querySelector("form");
-const emailPatter = /^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/;
+const indexFrom = document.querySelector("#myForm");
+const emailPatter = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const namePatter = /^[A-Za-záéíóúÁÉÍÓÚñÑ\s]+$/;
 const passPatter = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_])[^\s]{8,}$/;
 
