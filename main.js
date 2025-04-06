@@ -23,15 +23,39 @@ function verifyEmptyInputs(e) {
 }
 
 function showAlert(alertColor, message) {
+  if (message === "Debes rellenar todos los campos obligatorios") {
+    const userName = indexFrom[0];
+    const userEmail = indexFrom[3];
+    const userPass = indexFrom[5];
+    const userRepeatPass = indexFrom[6];
+
+    userName.className = "form-control";
+    userEmail.className = "form-control";
+    userPass.className = "form-control";
+    userRepeatPass.className = "form-control";
+
+    if (userName.value === "") {
+      userName.className = "form-control border border-danger";
+    }
+    if (userEmail.value === "") {
+      userEmail.className = "form-control border border-danger";
+    }
+    if (userPass.value === "") {
+      userPass.className = "form-control border border-danger";
+    }
+    if (userRepeatPass.value === "") {
+      userRepeatPass.className = "form-control border border-danger";
+    }
+  }
   const container = document.getElementById("relativeContainer");
   const divAlert = document.createElement("div");
   divAlert.id = "newAlert";
-  divAlert.className = `position-absolute top-50 start-50 translate-middle alert alert-${alertColor}`;
+  divAlert.className = `position-absolute top-50 start-50 translate-middle alert alert-${alertColor} fade show`;
   divAlert.role = "alert";
   divAlert.textContent = `${message}`;
   container.appendChild(divAlert);
   if (alertColor === "danger" || alertColor === "warning") return alertTimer(3500);
-  alertTimer(2000);
+  alertTimer(2500);
 }
 function alertTimer(num) {
   setTimeout(() => {
@@ -66,17 +90,16 @@ function validations() {
     showAlert("danger", "El formato del email no es correcto");
   }
 
-  if (!passPatter.test(userPass)) {
+  if (userRepeatPass !== userPass) {
+    userRepeatPass.className = "form-control border border-danger";
+    correctVerify = false;
+    showAlert("danger", "Las contraseñas deben coincidir");
+  } else if (!passPatter.test(userPass)) {
     userPass.className = "form-control border border-danger";
     correctPass = false;
     showAlert("danger", "La contraseña debe contener Mayúsculas, Minúsculas, Números y carácteres especiales. Longitud minima 8 carácteres");
   }
 
-  if (userRepeatPass !== userPass) {
-    userRepeatPass.className = "form-control border border-danger";
-    correctVerify = false;
-    showAlert("danger", "Las contraseñas deben coincidir");
-  }
   if (correctName && correctEmail && correctPass && correctVerify) {
     createUser();
   }
