@@ -14,10 +14,10 @@ if (window.document.location.pathname === "/initiationOnBootstrap/index.html") {
 function verifyEmptyInputs(e) {
   //compruebo los input userName userEmail userPass userRepeatPass
   e.preventDefault();
-  const userName = indexFrom[0].value;
-  const userEmail = indexFrom[3].value;
-  const userPass = indexFrom[5].value;
-  const userRepeatPass = indexFrom[6].value;
+  const userName = indexFrom[0].value.trim();
+  const userEmail = indexFrom[3].value.trim();
+  const userPass = indexFrom[5].value.trim();
+  const userRepeatPass = indexFrom[6].value.trim();
 
   userName === "" || userEmail === "" || userPass === "" || userRepeatPass === "" ? showAlert("danger", "Debes rellenar todos los campos obligatorios") : validations();
 }
@@ -34,16 +34,16 @@ function showAlert(alertColor, message) {
     userPass.className = "form-control";
     userRepeatPass.className = "form-control";
 
-    if (userName.value === "") {
+    if (userName.value.trim() === "") {
       userName.className = "form-control border border-danger";
     }
-    if (userEmail.value === "") {
+    if (userEmail.value.trim() === "") {
       userEmail.className = "form-control border border-danger";
     }
-    if (userPass.value === "") {
+    if (userPass.value.trim() === "") {
       userPass.className = "form-control border border-danger";
     }
-    if (userRepeatPass.value === "") {
+    if (userRepeatPass.value.trim() === "") {
       userRepeatPass.className = "form-control border border-danger";
     }
   }
@@ -63,10 +63,10 @@ function alertTimer(num) {
   }, num);
 }
 function validations() {
-  const userName = indexFrom[0].value;
-  const userEmail = indexFrom[3].value;
-  const userPass = indexFrom[5].value;
-  const userRepeatPass = indexFrom[6].value;
+  const userName = indexFrom[0].value.trim();
+  const userEmail = indexFrom[3].value.trim();
+  const userPass = indexFrom[5].value.trim();
+  const userRepeatPass = indexFrom[6].value.trim();
 
   let correctName = true;
   let correctEmail = true;
@@ -107,12 +107,12 @@ function validations() {
 
 function createUser() {
   const users = JSON.parse(localStorage.getItem("users")) || [];
-  const userName = indexFrom[0].value;
-  const lastName = indexFrom[1].value;
-  const image = indexFrom[2].value;
-  const userEmail = indexFrom[3].value;
-  const userCity = indexFrom[4].value;
-  const userPass = indexFrom[5].value;
+  const userName = indexFrom[0].value.trim();
+  const lastName = indexFrom[1].value.trim();
+  const image = indexFrom[2].value.trim();
+  const userEmail = indexFrom[3].value.trim();
+  const userCity = indexFrom[4].value.trim();
+  const userPass = indexFrom[5].value.trim();
 
   const userFind = users.find((user) => user.email === userEmail);
 
