@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous" />
+    <title>David Arrebola</title>
+  </head>
+  <body class="container d-flex min-vh-100">
+    <header class="container w-25 h-full bg-primary">
+      <nav class="navbar navbar-expand-lg bg-primary">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav d-flex flex-column gap-3">
+              <li class="nav-item">
+                <a class="nav-link active text-white text-uppercase fs-4" aria-current="page" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./usuarios.html" id="linkUsers">Usuarios</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container bg-light bg-gradient">
+      <div class="container-fluid position-relative d-flex flex-column justify-content-center h-100" id="relativeContainer">
+        <section class="container-fluid bg-primary p-4 t-4">
+          <h1 class="text-white">Rellena el formulario</h1>
+        </section>
+        <section class="container d-flex justify-content-center">
+          <form class="row g-3 p-4">
+            <div class="col-md-4">
+              <label for="firstName" class="form-label">First name</label>
+              <input type="text" class="form-control" id="firstName" placeholder="Mark" />
+            </div>
+            <div class="col-md-4">
+              <label for="lastName" class="form-label">Last name</label>
+              <input type="text" class="form-control" id="lastName" placeholder="Otto" />
+            </div>
+            <div class="col-md-4">
+              <label for="image" class="form-label">Imagen</label>
+              <input type="text" class="form-control" id="image" placeholder="URL de imagen de perfil" />
+            </div>
+            <div class="col-md-6">
+              <label for="userEmail" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="userEmail" placeholder="name@example.com" />
+            </div>
+            <div class="col-md-6">
+              <label for="userCity" class="form-label">City</label>
+              <input type="text" class="form-control" id="userCity" placeholder="Bilbao" />
+            </div>
+            <div class="col-md-8">
+              <label for="userPass" class="form-label">Password</label>
+              <input type="password" class="form-control" id="userPass" placeholder="Password" />
+            </div>
+            <div class="col-md-8">
+              <label for="verificatePass" class="form-label">Verifica Password</label>
+              <input type="password" class="form-control" id="verificatePass" placeholder="Repite Password" />
+            </div>
+            <div class="col-8 mt-4 w-">
+              <button class="btn btn-primary" type="submit">Enviar Formulario</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
