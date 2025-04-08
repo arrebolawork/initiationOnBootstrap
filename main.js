@@ -29,22 +29,22 @@ function showAlert(alertColor, message) {
     const userPass = indexFrom[5];
     const userRepeatPass = indexFrom[6];
 
-    userName.className = "form-control";
-    userEmail.className = "form-control";
-    userPass.className = "form-control";
-    userRepeatPass.className = "form-control";
+    userName.className = "form-control is-valid";
+    userEmail.className = "form-control is-valid";
+    userPass.className = "form-control is-valid";
+    userRepeatPass.className = "form-control is-valid";
 
     if (userName.value.trim() === "") {
-      userName.className = "form-control border border-danger";
+      userName.className = "form-control is-invalid";
     }
     if (userEmail.value.trim() === "") {
-      userEmail.className = "form-control border border-danger";
+      userEmail.className = "form-control is-invalid";
     }
     if (userPass.value.trim() === "") {
-      userPass.className = "form-control border border-danger";
+      userPass.className = "form-control is-invalid";
     }
     if (userRepeatPass.value.trim() === "") {
-      userRepeatPass.className = "form-control border border-danger";
+      userRepeatPass.className = "form-control is-invalid";
     }
   }
   const container = document.getElementById("relativeContainer");
